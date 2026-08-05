@@ -10,6 +10,7 @@ if (isAuthenticated()) {
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@ if (isAuthenticated()) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="<?= APP_URL ?>/assets/css/style.css" rel="stylesheet">
 </head>
+
 <body class="login-page">
     <div class="login-card card border-0">
         <div class="card-body p-4 p-md-5">
@@ -33,7 +35,7 @@ if (isAuthenticated()) {
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-person"></i></span>
                         <input type="text" class="form-control" id="username" name="username" required autofocus
-                               placeholder="superadmin" autocomplete="username">
+                            placeholder="superadmin" autocomplete="username">
                     </div>
                 </div>
                 <div class="mb-4">
@@ -41,7 +43,7 @@ if (isAuthenticated()) {
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-lock"></i></span>
                         <input type="password" class="form-control" id="password" name="password" required
-                               placeholder="••••••••" autocomplete="current-password">
+                            placeholder="••••••••" autocomplete="current-password">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 py-2" id="loginBtn">
@@ -50,7 +52,7 @@ if (isAuthenticated()) {
                 </button>
             </form>
 
-            <div class="mt-4 p-3 bg-light rounded small">
+            <!-- <div class="mt-4 p-3 bg-light rounded small">
                 <strong>Demo Accounts</strong> (password: <code>Admin@123</code>)
                 <ul class="mb-0 mt-1">
                     <li>superadmin — Full access</li>
@@ -58,14 +60,17 @@ if (isAuthenticated()) {
                     <li>attofficer — Attendance</li>
                     <li>reportofficer — Reports</li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>window.APP_URL = '<?= APP_URL ?>';</script>
+    <script>
+        window.APP_URL = '<?= APP_URL ?>';
+    </script>
     <script type="module" src="<?= APP_URL ?>/assets/js/auth.js"></script>
 </body>
+
 </html>
