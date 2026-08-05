@@ -164,10 +164,8 @@ async function submitRegistration(e) {
             other_name: document.getElementById('regOtherName').value.trim(),
             gender: document.getElementById('regGender').value,
             phone: document.getElementById('regPhone').value.trim(),
-            email: document.getElementById('regEmail').value.trim(),
             church: document.getElementById('regChurch').value.trim(),
-            state: document.getElementById('regState').value.trim(),
-            date_of_birth: document.getElementById('regDob').value || null
+            state: document.getElementById('regState').value.trim()
         };
     }
 

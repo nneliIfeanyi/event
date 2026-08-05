@@ -148,17 +148,15 @@ if ($method === 'POST') {
             $participantId = (int)$existing['id'];
         } else {
             $ins = $pdo->prepare("
-                INSERT INTO participants (surname, first_name, other_name, gender, date_of_birth, phone, email, church, occupation, address, state, country, emergency_contact_name, emergency_contact_phone)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                INSERT INTO participants (surname, first_name, other_name, gender, phone, church, occupation, address, state, country, emergency_contact_name, emergency_contact_phone)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
             ");
             $ins->execute([
                 $surname,
                 $firstName,
                 trim($p['other_name'] ?? '') ?: null,
                 $gender,
-                $p['date_of_birth'] ?? null,
                 $phone,
-                trim($p['email'] ?? '') ?: null,
                 trim($p['church'] ?? '') ?: null,
                 trim($p['occupation'] ?? '') ?: null,
                 trim($p['address'] ?? '') ?: null,

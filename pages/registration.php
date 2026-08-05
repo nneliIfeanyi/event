@@ -122,14 +122,6 @@ require_once __DIR__ . '/../includes/sidebar.php';
                                 <label class="form-label">Phone *</label>
                                 <input type="tel" class="form-control" id="regPhone">
                             </div>
-                            <div class="col-md-4">
-                                <label class="form-label">Date of Birth</label>
-                                <input type="date" class="form-control" id="regDob">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Email</label>
-                                <input type="email" class="form-control" id="regEmail">
-                            </div>
                             <div class="col-md-6">
                                 <label class="form-label">Church</label>
                                 <input type="text" class="form-control" id="regChurch">
