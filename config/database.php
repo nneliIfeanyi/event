@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Database Configuration & PDO Connection
  * Event Management System
@@ -6,10 +7,10 @@
 
 declare(strict_types=1);
 
-define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
-define('DB_NAME', getenv('DB_NAME') ?: 'event_dashboard');
-define('DB_USER', getenv('DB_USER') ?: 'root');
-define('DB_PASS', getenv('DB_PASS') ?: '');
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_NAME', getenv('DB_NAME') ?: 'leadstar_event-system');
+define('DB_USER', getenv('DB_USER') ?: 'leadstar_event-system');
+define('DB_PASS', getenv('DB_PASS') ?: 'Avalanche@25');
 define('DB_CHARSET', 'utf8mb4');
 
 /**
