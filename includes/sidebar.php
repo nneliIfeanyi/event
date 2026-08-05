@@ -8,7 +8,7 @@ $roleId = (int)($user['role_id'] ?? 0);
     <div class="sidebar-header d-flex align-items-center justify-content-between px-3 py-3 border-bottom border-secondary">
         <a href="<?= APP_URL ?>/pages/dashboard.php" class="text-white text-decoration-none d-flex align-items-center gap-2">
             <i class="bi bi-calendar-event fs-4 text-primary"></i>
-            <span class="fw-bold sidebar-brand">EventDash</span>
+            <span class="fw-bold sidebar-brand">Event Admin</span>
         </a>
         <button class="btn btn-sm btn-outline-light d-lg-none" id="sidebarClose" type="button">
             <i class="bi bi-x-lg"></i>
@@ -35,45 +35,45 @@ $roleId = (int)($user['role_id'] ?? 0);
         </li>
 
         <?php if (in_array($roleId, [ROLE_SUPER_ADMIN, ROLE_REGISTRATION], true)): ?>
-        <li class="nav-item">
-            <a class="nav-link <?= $currentPage === 'events' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/events.php">
-                <i class="bi bi-calendar3 me-2"></i> Events
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link <?= $currentPage === 'participants' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/participants.php">
-                <i class="bi bi-people me-2"></i> Participants
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link <?= $currentPage === 'registration' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/registration.php">
-                <i class="bi bi-person-plus me-2"></i> Registration
-            </a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $currentPage === 'events' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/events.php">
+                    <i class="bi bi-calendar3 me-2"></i> Events
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $currentPage === 'participants' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/participants.php">
+                    <i class="bi bi-people me-2"></i> Participants
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $currentPage === 'registration' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/registration.php">
+                    <i class="bi bi-person-plus me-2"></i> Registration
+                </a>
+            </li>
         <?php endif; ?>
 
         <?php if (in_array($roleId, [ROLE_SUPER_ADMIN, ROLE_ATTENDANCE, ROLE_REGISTRATION], true)): ?>
-        <li class="nav-item">
-            <a class="nav-link <?= $currentPage === 'attendance' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/attendance.php">
-                <i class="bi bi-check2-square me-2"></i> Attendance
-            </a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $currentPage === 'attendance' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/attendance.php">
+                    <i class="bi bi-check2-square me-2"></i> Attendance
+                </a>
+            </li>
         <?php endif; ?>
 
         <?php if (in_array($roleId, [ROLE_SUPER_ADMIN, ROLE_REPORTS, ROLE_REGISTRATION], true)): ?>
-        <li class="nav-item">
-            <a class="nav-link <?= $currentPage === 'reports' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/reports.php">
-                <i class="bi bi-bar-chart-line me-2"></i> Reports
-            </a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $currentPage === 'reports' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/reports.php">
+                    <i class="bi bi-bar-chart-line me-2"></i> Reports
+                </a>
+            </li>
         <?php endif; ?>
 
         <?php if ($roleId === ROLE_SUPER_ADMIN): ?>
-        <li class="nav-item mt-2">
-            <a class="nav-link <?= $currentPage === 'settings' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/settings.php">
-                <i class="bi bi-gear me-2"></i> Settings
-            </a>
-        </li>
+            <li class="nav-item mt-2">
+                <a class="nav-link <?= $currentPage === 'settings' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/settings.php">
+                    <i class="bi bi-gear me-2"></i> Settings
+                </a>
+            </li>
         <?php endif; ?>
     </ul>
 
