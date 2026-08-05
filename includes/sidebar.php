@@ -45,6 +45,9 @@ $roleId = (int)($user['role_id'] ?? 0);
                     <i class="bi bi-people me-2"></i> Participants
                 </a>
             </li>
+        <?php endif; ?>
+
+        <?php if (in_array($roleId, [ROLE_SUPER_ADMIN, ROLE_REGISTRATION, ROLE_ATTENDANCE], true)): ?>
             <li class="nav-item">
                 <a class="nav-link <?= $currentPage === 'registration' ? 'active' : '' ?>" href="<?= APP_URL ?>/pages/registration.php">
                     <i class="bi bi-person-plus me-2"></i> Registration
