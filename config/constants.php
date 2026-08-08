@@ -9,7 +9,7 @@ declare(strict_types=1);
 // Application
 define('APP_NAME', 'Event Management System');
 define('APP_VERSION', '1.0.0');
-define('APP_URL', getenv('APP_URL') ?: 'https://leadstar.com.ng/sulejadisciples');
+define('APP_URL', getenv('APP_URL') ?: 'https://admin.sulejadisciples.com');
 
 // Paths
 define('BASE_PATH', dirname(__DIR__));
